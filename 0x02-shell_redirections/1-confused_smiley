@@ -1,0 +1,2 @@
+#!/bin/bash 
+printf "\x22(\303\224o)'\n" 
