@@ -1,5 +1,4 @@
 
 #!/usr/bin/env bash
 # Script that prints its own PID
-
 echo "$$
