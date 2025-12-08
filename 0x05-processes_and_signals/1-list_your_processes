@@ -1,3 +1,12 @@
-#!/usr/bin/env bash
-# A script that displays all running processes with hierarchy
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+#!/bin/bash
+
+printf "%-10s %-10s %s\n" "USER" "STARTED" "COMMAND"
+
+ps -eo user,lstart,cmd --no-headers | while read user weekday month day time year cmd
+do
+    # Extract HH:MM:SS from the time field
+    # lstart gives something like: Fri Dec  6 06:49:55 2025
+    started=$(echo $time)
+
+    printf "%-10s %-10s %s\n" "$user" "$started" "$cmd"
+done
