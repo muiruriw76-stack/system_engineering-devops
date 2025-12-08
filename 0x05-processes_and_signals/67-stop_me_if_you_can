@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script that stops the 7-highlander process without kill or killall
+pid="$(pgrep -f 7-highlander)"
+echo 15 > "/proc/$pid/oom_score_adj" 2>/dev/null
