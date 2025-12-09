@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# A script that survives SIGTERM and prints a message
+# Script that displays I am invincible!!! when receiving SIGTERM
 trap 'echo "I am invincible!!!"' SIGTERM
 while true
 do
