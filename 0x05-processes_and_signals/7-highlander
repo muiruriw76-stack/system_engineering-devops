@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Script that displays I am invincible!!! when receiving SIGTERM
+# Infinite loop that displays a message and handles SIGTERM gracefully.
 trap 'echo "I am invincible!!!"' SIGTERM
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
+while true; do
+ echo "To infinity and beyond"
+ sleep 2
 done
