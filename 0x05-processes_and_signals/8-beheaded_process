@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Start a child process that keeps running
+sleep 1000 &
+CHILD=$!
+
+# Immediately kill the parent (this script)
+kill -9 $$
